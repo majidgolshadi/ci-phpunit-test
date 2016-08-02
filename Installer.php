@@ -18,6 +18,10 @@ class Installer
             dirname(__FILE__) . '/application/tests',
             $app . '/' . static::TEST_FOLDER
         );
+        rename(
+            $app . '/' . static::TEST_FOLDER . '/phpunit.xml',
+            './phpunit.xml'
+        );
         self::fixPath($app);
     }
 
